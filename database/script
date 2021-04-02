@@ -1,0 +1,15 @@
+-- CREATEsolicitante
+
+CREATE DATABASE node
+DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE node;
+
+-- tabela de node
+CREATE TABLE node(
+id BIGINT UNIQUE AUTO_INCREMENT NOT NULL,
+nome VARCHAR(50) NOT NULL,
+email VARCHAR(70) UNIQUE NOT NULL,
+ativo ENUM('S','N') NOT NULL DEFAULT 'S',
+criacao DATETIME DEFAULT CURRENT_TIMESTAMP
+)engine=MyISAM default charset=utf8 collate=utf8_unicode_ci;
